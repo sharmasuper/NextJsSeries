@@ -1,20 +1,32 @@
 
 'use client'
+import { useState } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
-  function apple(data) {
-    alert(data)
+
+  //use satate
+  const [name,setname] = useState("hanuman")
+
+  function apple () {
+  setname("ganesh")
   }
+  //use variable
+  let change = "sharma"
+  
+  function Update() {
+    change = "mohit"
+  }
+ 
   return (
     <main className={styles.main}>
     <h1>Home Page</h1>     
- 
- <button onClick={()=>alert("hello Next js")}>Click Me</button>
-  {/* if not write use client in top of component it give error * we always write on the top of component  if home component have any child who import in page.js we did'nt 
-     need to write use client again and again
-  */}
-  <button   onClick={()=>apple("mango")}>apple</button>
+    <h1>Event,function,and State - {name}</h1>
+ <button onClick={()=>apple()}>ClickMe</button>
+ {/* variable use */}
+ <h2>my change - {change}</h2>
+ <button onClick={Update}>ClickMe</button>
+  
     </main>
   );
 }
