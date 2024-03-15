@@ -11,22 +11,25 @@ export default function Home() {
   function apple () {
   setname("ganesh")
   }
-  //use variable
-  let change = "sharma"
   
-  function Update() {
-    change = "mohit"
-  }
+ const InnerComponent = () =>{
+  return (
+    <>
+     <h1>Inner - Component Use</h1>
+    </>
+  )
+ }
  
   return (
     <main className={styles.main}>
     <h1>Home Page</h1>     
     <h1>Event,function,and State - {name}</h1>
  <button onClick={()=>apple()}>ClickMe</button>
- {/* variable use */}
- <h2>my change - {change}</h2>
- <button onClick={Update}>ClickMe</button>
-  
+ 
+ <InnerComponent/>
+ {/* 2nd method */}
+ {InnerComponent()}
+ 
     </main>
   );
 }
