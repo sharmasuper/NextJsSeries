@@ -15,9 +15,20 @@ import { useRouter } from "next/navigation"
             <br/>
             {/* navigation */}
            <button onClick={()=>router.push("/")}>Go To Home Page using Navigation</button>
-
+           
      {/* short navigation method  */}
-        <button onClick={()=>Add("/")}>short navigation methid to go home </button>
+     <pre>
+        
+     </pre>
+        <button onClick={()=>Add("/")}>short navigation methid to go home </button><br/>
+   {/* nested roution useing routing */}
+        <button onClick={()=>Add("/Login/LoginStudent")}>LoginStudent</button><br/>
+        <pre>  
+
+        </pre>
+        <button onClick={()=>Add("/Login/LoginTeacher")}>LoginTeacher</button>
+
+
         </div>
     )
 }
