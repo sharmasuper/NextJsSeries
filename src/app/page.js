@@ -18,9 +18,10 @@ export default function Home() {
     </pre>
   
    <Link href="/About/AboutStudent">NextTed About</Link>    <br/>
-   <Link href="/About/AboutCollage">AboutCollage</Link>
+   <Link href="/About/AboutCollage">AboutCollage</Link><br/>
 
-  
+  <Link href="/ProductList">ProductList</Link>
+  {/* Link dalana server api ka use karnai kai liy */}
      
      
          

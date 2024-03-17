@@ -1,25 +1,54 @@
-"use client"
-import { useState, useEffect } from "react";
-import axios from 'axios'
-function Page() {
-    const [Data,addData] = useState([])
-  const Product = async() =>{
-    const url =  await axios.get("https://dummyjson.com/products")
-    const response = url.data.products
-           addData(response)
-    // console.log(response.products )
-  }
-  useEffect(()=>{
-    Product()
-  })
-    return (
-        <div>
-          {Data.map((item)=>{
-            return <h1>{item.title}</h1>
-          })}
-         
-        </div>
-    );
+// async function ProductList() {
+//      let data = await fetch("https://dummyjson.com/products")
+//      data = await data.json();
+//      return data.products
+// }
+
+//  async function page() {
+//  let products = await ProductList()
+//  console.log(products)
+//   return (
+//     <div>
+//       <h1>ProductList</h1>
+//       {products.map((item)=>{
+//       return <h1>{item.title}</h1>
+//       })}
+//     </div>
+//   )
+// }
+
+// export default page;
+// 2nd method to use call api in server component in next js
+import axios from "axios"
+const ProductList = async() =>{
+    let data = await axios.get("https://dummyjson.com/products")
+    return data.data.products
+
 }
 
-export default Page;
+
+ async function page() {
+    let products = await ProductList()
+    console.log(products)
+  return (
+    <div>
+      {products.map((item,index)=>{
+        return <h1 className={index}>{item.title}</h1>
+      })}
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+export default page;
+
+
