@@ -1,3 +1,9 @@
-.headers{
-background-color: yellow;
+.red{
+    color:red;
+}
+.green{
+    color:green;
+}
+#orange{
+    background-color: orange;
 }
