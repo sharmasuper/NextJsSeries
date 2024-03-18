@@ -1,10 +1,16 @@
 // "use client" ismai bhi kam karga
-"use client"
-import styles from "./page.module.css";
 
-import Image from "next/image";
+import styles from "./page.module.css";
 import Versel from '../../public/vercel.svg'
-import Image2 from  "./canava.png" 
+import {Pinyon_Script} from 'next/font/google'
+
+const roboto =  Pinyon_Script({
+  weight:"400",
+  subsets:['latin'],
+  display:'swap'
+})
+
+console.log(roboto)
 
 export default function Home() {
 
@@ -13,19 +19,9 @@ console.log(Versel)
    
   return (
     <main className={styles.main}>
-   
-     {/* <Image src={Versel} height={300} width={500} alt="image"  />  */}
-
-     {/* hum iss image ko HTml img tag sai bhi load karva sktai hai but next ki vo lambhi process h but yai optimization kai liy */}
-   {/* <img src={Versel.src}/> */}
-
-
-{/* server url Image next.config.mjs mai domain dala */}
-
-   {/* <Image src="https://cdn.dummyjson.com/product-images/1/1.jpg"
-   width={200} height={300} alt="modiji"
-   /> */}
-   <Image src={Image2} width="100%" height="100%" alt="media" />
+   <h1>font optimazation in Next</h1>
+   {/* <h1 style={{fontFamily:'Roboto',fontWeight:100}}>Font with Link Tag in Next</h1> */}
+     <h1 className={roboto.className}>font with next js font feature</h1>
    </main>
    )
 }
