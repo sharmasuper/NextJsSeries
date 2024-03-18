@@ -15,6 +15,6 @@ export function middleware(request){
 // }
 
 //one more code ko redirect karna we use Array
-export const config = {
+export const config = {           //or bhi add kar sktai jsko redirect karna h
     matcher : ["/About/:path*","/StudentList/:path*"]
 }
