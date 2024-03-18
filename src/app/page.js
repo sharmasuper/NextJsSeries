@@ -1,8 +1,6 @@
 
-
-
-import Link from "next/link";
 import styles from "./page.module.css";
+import './style.css'
 
 export default function Home() {
   
@@ -10,21 +8,9 @@ export default function Home() {
   
   return (
     <main className={styles.main}>
-    <h1>Home Page</h1>    
-     {/*Linking Routing  */}
-    <Link href="/Login">Go to Login Page</Link> <br/>
-    <Link href="/About">Go to about page</Link>
-    <pre>
-    </pre>
-  
-   <Link href="/About/AboutStudent">NextTed About</Link>    <br/>
-   <Link href="/About/AboutCollage">AboutCollage</Link><br/>
-
-  <Link href="/ProductList">ProductList</Link>
-  {/* Link dalana server api ka use karnai kai liy */}
-     
-     
-         
+   
+  <h1>style and css with Next js</h1>
+  <h2>Heading 2 in main home page</h2>
     
     </main>
   );
