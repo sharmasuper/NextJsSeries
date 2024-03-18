@@ -20,6 +20,7 @@
 // export default page;
 // 2nd method to use call api in server component in next js
 import axios from "axios"
+import Product from "./product"
 const ProductList = async() =>{
     let data = await axios.get("https://dummyjson.com/products")
     return data.data.products
@@ -33,7 +34,13 @@ const ProductList = async() =>{
   return (
     <div>
       {products.map((item,index)=>{
-        return <h1 className={index}>{item.title}</h1>
+        return (
+          <>
+        <p className={index}>{item.title}</p>
+         <Product title = {item.title}/>
+
+        </>
+        )
       })}
     </div>
   );
