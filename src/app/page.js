@@ -19,10 +19,7 @@ console.log(Versel)
    
   return (
     <main className={styles.main}>
-   <h1>font optimazation in Next</h1>
-   {/* <h1 style={{fontFamily:'Roboto',fontWeight:100}}>Font with Link Tag in Next</h1> */}
-     <h1 className={roboto.className}>font with next js font feature</h1>
-   
+    <h2>Export static Html page with Build</h2>
    </main>
    )
 }

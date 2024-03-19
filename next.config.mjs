@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images :{
-        domains :["cdn.dummyjson.com"] 
-    }
+   output : "export"   // agar yai line nahi likhgai to hamara static html export nahi hoga
 };
 
 export default nextConfig;
