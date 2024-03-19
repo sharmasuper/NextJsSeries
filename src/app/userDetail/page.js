@@ -10,8 +10,8 @@ function page() {
         onLoad={()=>{console.log("file Loaded")}}
         />
       <h1>Get user GeoLocation</h1>
-   {/* Location.js hamai library ki trah use karnai kai liy banai taki hum usesai kahi per bhi use kar skai */}
-
+   {/* Location.js hamai library ki trah use karnai kai liy banai h taki hum usesai kahi per bhi use kar skai */}
+      
     </div>
   );
 }
