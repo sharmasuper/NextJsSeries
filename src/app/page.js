@@ -1,25 +1,22 @@
 // "use client" ismai bhi kam karga
 
+import { API_Base_Url } from "@/config/constant";
 import styles from "./page.module.css";
-import Versel from '../../public/vercel.svg'
-import {Pinyon_Script} from 'next/font/google'
-
-const roboto =  Pinyon_Script({
-  weight:"400",
-  subsets:['latin'],
-  display:'swap'
-})
-
-console.log(roboto)
 
 export default function Home() {
 
-console.log(Versel) 
-   // iss console mai dekhai to ismai src ki property bhi h jssai hum html img src ko tag kartai h to image aa jati h 
-   
+ // console.log(process.env)     //environment variables ko check karnai kai liy
+//  console.log(process.env.server_Password)
+//esai hum variables bhi declaire karkai condition laga sktai h
+  console.log(process.env.sharma_password)
+  
+
   return (
     <main className={styles.main}>
-    <h2>Export static Html page with Build</h2>
+      {
+        process.env.NODE_ENV === "development" ? <h1>You are on Development</h1> : <h1>Environment Variables in Next js production </h1>
+      }
+    <h1>{API_Base_Url}</h1>
    </main>
    )
 }

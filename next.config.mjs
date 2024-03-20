@@ -22,7 +22,7 @@ const nextConfig = {
        {
          source:'/collage',
          destination:"/",
-         permanent:'false'
+        permanent:false
        }
 
       ]
