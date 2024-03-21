@@ -10,7 +10,7 @@ export function GET (request,content) {
 
 
 
-     return NextResponse.json(userdata.length === 0? {result:"No data found",success : false}:{result:userdata,success:true },{status:200})
+     return NextResponse.json(userdata.length === 0? {result:"No data found",success : false}:{result:userdata[0],success:true },{status:200})
 }
 
 
