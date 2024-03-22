@@ -25,13 +25,17 @@ export async function PUT(request,content){
         }
           return NextResponse.json({result:payload,success:true},{status:200})
         
-    
-    
-
 }
 
 
-
+export function DELETE(request,content){
+  let id = content.params.userId
+ if(id){
+  return NextResponse.json({result:"user deleted",success:true},{status:200})
+ }else{
+  return NextResponse.json({result:"user id not Valid ,Internal error please try after some time"},{status:400})
+ }
+}
 
 
 
