@@ -22,7 +22,8 @@ const GetUser = async() =>{
            <div key={age}>
             <p>{name}</p>
             <p>{email}</p>
-            <Link href={`user/${age}`}>{name}</Link>
+            <Link href={`user/${age}`}>{name}</Link> <br/>
+            <Link href={`user/${age}/Update`}>Edit</Link>
            </div>
         )
        })}
